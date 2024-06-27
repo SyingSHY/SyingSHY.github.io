@@ -60,6 +60,7 @@ html {
   pre {
     margin-bottom: 0;
     font-size: $code-font-size;
+    font-family: $font-family-code;
     line-height: 1.4rem;
     word-wrap: normal; /* Fixed Safari overflow-x */
   }

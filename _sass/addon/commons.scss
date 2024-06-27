@@ -54,9 +54,25 @@ body {
       }
 
       font-size: 1rem + (5 - $i) * $factor;
+      font-weight: 400 + (5 - $i) * 100;
+      margin-top: 1rem + (5 - $i) * 0.5rem;
     } @else {
       font-size: 1rem;
     }
+  }
+
+  h#{$i}::after {
+    @if $i == 2 {
+      content: "";
+      display: block;
+      width: auto; /* 밑줄 길이 조절 */
+      border-bottom: 1px solid #bcbcbc;
+      margin: 5px auto 0px;
+    }
+  }
+
+  h#{$i} + h#{$i+1} {
+    margin-top: 0rem;
   }
 }
 
@@ -745,7 +761,7 @@ $btn-mb: 0.5rem;
   }
 
   .site-subtitle {
-    font-size: 85%;
+    font-size: 95%;
     color: var(--site-subtitle-color);
     margin-top: 0.25rem;
     word-spacing: 1px;
